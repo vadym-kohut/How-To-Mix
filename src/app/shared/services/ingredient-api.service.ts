@@ -7,7 +7,7 @@ import { IngredientDetails, IngredientListItem, IngredientListResponse } from ".
 @Injectable({
   providedIn: 'root'
 })
-export class IngredientsApiService {
+export class IngredientApiService {
   private http = inject(HttpClient);
   private apiUrl = "https://www.thecocktaildb.com/api/json/v1/1";
 

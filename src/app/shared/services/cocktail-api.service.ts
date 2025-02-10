@@ -13,7 +13,7 @@ import {
 @Injectable({
   providedIn: 'root'
 })
-export class CocktailsApiService {
+export class CocktailApiService {
   private http = inject(HttpClient);
   private apiUrl = "https://www.thecocktaildb.com/api/json/v1/1";
 
@@ -45,7 +45,7 @@ export class CocktailsApiService {
           for (let i = 1; i <= 15; i++) {
             const ingredientName = cocktailDetails[`strIngredient${i}` as keyof CocktailDetailsResponse];
             const ingredientMeasure = cocktailDetails[`strMeasure${i}` as keyof CocktailDetailsResponse];
-            ingredientName && ingredientMeasure && ingredientList.push({ ingredientName, ingredientMeasure });
+            if (ingredientName && ingredientMeasure) ingredientList.push({ ingredientName, ingredientMeasure });
             delete cocktailDetails[`strIngredient${i}` as keyof CocktailDetailsResponse];
             delete cocktailDetails[`strMeasure${i}` as keyof CocktailDetailsResponse];
           }

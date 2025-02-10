@@ -1,5 +1,5 @@
 import { inject, Injectable, Signal } from '@angular/core';
-import { CocktailsApiService } from "./cocktail-api.service";
+import { CocktailApiService } from "./cocktail-api.service";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { CocktailDetails, CocktailFilters, CocktailListItem } from "../models/cocktail.model";
 
@@ -7,7 +7,7 @@ import { CocktailDetails, CocktailFilters, CocktailListItem } from "../models/co
     providedIn: 'root'
 })
 export class CocktailDbService {
-    private cocktailApiService = inject(CocktailsApiService);
+    private cocktailApiService = inject(CocktailApiService);
 
     allCocktailsList: Signal<CocktailDetails[]> = toSignal(this.cocktailApiService.getAllCocktailsList$(), { initialValue: [] });
     cocktailFilters: Signal<CocktailFilters> = toSignal(this.cocktailApiService.getCocktailFilters$(),
