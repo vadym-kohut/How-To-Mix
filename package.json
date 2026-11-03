@@ -32,8 +32,8 @@
     "@angular/compiler-cli": "^20.3.35",
     "@jest/types": "^29.6.3",
     "@types/jasmine": "~5.1.0",
-    "angular-eslint": "19.0.2",
-    "eslint": "^9.16.0",
+    "angular-eslint": "22.6.0",
+    "eslint": "^9.28.0",
     "husky": "^9.1.7",
     "jasmine-core": "~5.5.0",
     "jest-preset-angular": "^14.5.1",
@@ -43,6 +43,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.72.1"
+    "typescript-eslint": "^8.33.1"
   }
 }
