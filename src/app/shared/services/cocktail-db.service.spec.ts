@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { CocktailDbService } from './cocktail-db.service';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withXhr } from '@angular/common/http';
 
 describe('CocktailDbService', () => {
   let service: CocktailDbService;
@@ -9,7 +9,7 @@ describe('CocktailDbService', () => {
     TestBed.configureTestingModule({
       providers: [
         CocktailDbService,
-        provideHttpClient()
+        provideHttpClient(withXhr())
       ],
     });
     service = TestBed.inject(CocktailDbService);

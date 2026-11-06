@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { CocktailApiService } from './cocktail-api.service';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withXhr } from '@angular/common/http';
 
 describe('CocktailApiService', () => {
   let service: CocktailApiService;
@@ -9,7 +9,7 @@ describe('CocktailApiService', () => {
     TestBed.configureTestingModule({
       providers: [
         CocktailApiService,
-        provideHttpClient()
+        provideHttpClient(withXhr())
       ],
     });
     service = TestBed.inject(CocktailApiService);
